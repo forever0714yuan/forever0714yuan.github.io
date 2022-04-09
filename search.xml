@@ -4,9 +4,34 @@
   
     
     <entry>
+      <title>HTML</title>
+      <link href="/2022/04/09/qian-duan-xue-xi/"/>
+      <url>/2022/04/09/qian-duan-xue-xi/</url>
+      
+        <content type="html"><![CDATA[<h3 id="HTML概述"><a href="#HTML概述" class="headerlink" title="HTML概述"></a>HTML概述</h3><h4 id="HTML历史介绍"><a href="#HTML历史介绍" class="headerlink" title="HTML历史介绍"></a>HTML历史介绍</h4><p>首先在讲HTML的概述之前，我们有必要了解一下html的历史发展。</p><p>从1993到2019年，html发展总共16个年头，语言的版本也在不断的更新迭代。</p><p>那么，在1999年12月份，w3c推荐了此标准，此时html4.01版本诞生。这个版本一直维持了15个年头，在2014年10月份，w3c推荐了HTML5的标准。</p><blockquote><p>html5的诞生更加让我们更加适宜时代要求。在HTML5中视频、音频、图像、动画都会标准化，会解决浏览器兼容这个令人头疼的问题。</p></blockquote><p>Sublime Text是由程序员Jon Skinner于2008年1月份所开发出来，它最初被设计为一个具有丰富扩展功能的<a href="https://baike.baidu.com/item/Vim">Vim</a></p><h4 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h4><p>HTML全称HyperText Mackeup Language，超文本标记语言。</p><h5 id="什么是超文本？"><a href="#什么是超文本？" class="headerlink" title="什么是超文本？"></a>什么是超文本？</h5><p>比如网页的超链接、图片、音频、视频都称为超文本。</p><h5 id="什么是标记？"><a href="#什么是标记？" class="headerlink" title="什么是标记？"></a>什么是标记？</h5><p>举个栗子</p><p>打开sublime，新建index.html,输入一下文字内容。用Chrome浏览器打开。</p><p><img src="https://wx1.sinaimg.cn/mw2000/006pEY43gy1h13hvqsr4cj3274074gsp.jpg"></p><p>如果我们在网页中看到这篇文章。我们只有在阅读完这段文字之后，才能正常的发现原来描述的是吉泽明步这个人的资料。</p><p>但是大部分的文章内容，是通过对吉泽明步（Yoshizawa Akiho）<strong>加粗加黑</strong>才凸显描述的<strong>标题</strong>。那么在html中我们可以将此内容用标记包裹起来，与我们的文字内容混合使用。</p><p>比如我们可以用<code>&lt;h1&gt;吉泽明步（Yoshizawa Akiho）&lt;/h1&gt;</code>,会发现</p><p><img src="https://wx4.sinaimg.cn/mw2000/006pEY43gy1h13hvlmgtzj327y0bmgtk.jpg"></p><pre class="line-numbers language-none"><code class="language-none">吉泽明步（Yoshizawa Akiho），1984年3月3日出生于日本东京。AV女优，艺人，写真模特，歌手，演员。前日本女子偶像组合惠比寿麝香葡萄的成员。2003年出道。2007年，获得日本“The AV Grand Prix”的第一名。 [1]  2012年在日本成人电影30周年纪念企划（av30年）人气投票中排名第三。2013年获得“日本成人放送大赏”最佳作品奖，继续巩固自己的业界地位。 [2]  2014年4月获2014DMM成人赏的话题赏。2005年亦有为日本东京电视台出品的电视剧《嬢王》演出。 [3]  在以日本艺能界为事业主线的同时积极拓展海外市场。2011年主演于香港拍摄的《蜜桃成熟时33D》。 [4]  2014年网络剧《屌丝男士第三季》也有吉泽明步的出演。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>那么，不仅仅是对文字加粗加黑，还可以设置图片，网页的超链接等等。</p><p><img src="https://wx3.sinaimg.cn/mw2000/006pEY43gy1h13hvrh2b0j31qo0peasa.jpg"></p><h5 id="什么是语言？"><a href="#什么是语言？" class="headerlink" title="什么是语言？"></a>什么是语言？</h5><p>很简单，假如我是个包工头，工地的工人来自全国各地，那么有河南人，另外还有外国人，工地还有一条狗</p><p>如果我要让他们干活，说：好好干活</p><p>对河南人说：‘好好干活’</p><p>对外国人说：“Do you work”</p><p>对狗说：’汪汪汪‘</p><p>一样的，我们现在电脑有台计算机，现在在html文件中写的内容，计算机上的浏览器会去解析你编写的代码，这写的内容，我们就称为标记语言。浏览器可以直接解析这种语言</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>个人博客的搭建</title>
-      <link href="/2022/04/08/index/"/>
-      <url>/2022/04/08/index/</url>
+      <link href="/2022/04/08/ge-ren-bo-ke-de-da-jian/"/>
+      <url>/2022/04/08/ge-ren-bo-ke-de-da-jian/</url>
       
         <content type="html"><![CDATA[]]></content>
       
