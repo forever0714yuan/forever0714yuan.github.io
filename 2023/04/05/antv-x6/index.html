@@ -470,7 +470,7 @@ onMounted(() =&gt; {
 <li><code>background</code>，画布的背景,比如这里我们设置了背景的颜色</li>
 </ul>
 <p>到这里我们应该在浏览器中就有一个画布了。</p>
-<p><img src="https://forever0714yuan.github.io/2023/04/05/antv-x6/image-20230405223008142.png" alt="image-20230405223008142"></p>
+<p><img src="/2023/04/05/antv-x6/image-20230405223008142.png" alt="image-20230405223008142"></p>
 <h3 id="渲染节点和边"><a href="#渲染节点和边" class="headerlink" title="渲染节点和边"></a>渲染节点和边</h3><p>X6 支持 JSON 格式数据，该对象中 <code>nodes</code> 代表节点数据，<code>edges</code> 代表边数据，可以使用 <code>attrs</code> 属性来定制节点和边的样式（可以类比 CSS）。</p>
 <h4 id="定义节点和边的信息"><a href="#定义节点和边的信息" class="headerlink" title="定义节点和边的信息"></a>定义节点和边的信息</h4><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;script setup lang="ts"&gt;
 // 定义节点和边的信息
@@ -587,7 +587,7 @@ onMounted(() =&gt; {
 &lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>然后去看浏览器，应该会有如下的画面：</p>
-<p><img src="https://forever0714yuan.github.io/2023/04/05/antv-x6/image-20230409141559243.png" alt="image-20230409141559243"></p>
+<p><img src="/2023/04/05/antv-x6/image-20230409141559243.png" alt="image-20230409141559243"></p>
 <p>我们在上面使用的时候，看到<code>graph.value.fromJSON(data);</code>这种用法，总是先<code>.value</code>之后再使用对应的方法，其实这个是因为我们创建变量的时候，使用的是<code>ref</code>创建的变量，使用<code>ref</code>创建的变量，只要不是在模版中使用，都是需要<code>.value</code>的。</p>
 <p>到这里，快速上手就完毕了，就是这么简单。</p>
 <h2 id="画布"><a href="#画布" class="headerlink" title="画布"></a>画布</h2><p> 画布布是在 X6 中用于展示和编辑图形的区域，类似于绘图板的概念。通过画布，可以创建、移动、编辑和删除图形，包括节点、连接线、文本等。</p>
@@ -618,7 +618,7 @@ onMounted(() =&gt; {
 &lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>设置好之后，查看效果</p>
-<p><img src="https://forever0714yuan.github.io/2023/04/05/antv-x6/image-20230410203658420.png" alt="image-20230410203658420"></p>
+<p><img src="/2023/04/05/antv-x6/image-20230410203658420.png" alt="image-20230410203658420"></p>
 <p>当我们拉动浏览器的宽度的时候，我们发现，画布左右侧始终有一定的空间，画布会自适应变化宽度。</p>
 <h3 id="设置背景和网格"><a href="#设置背景和网格" class="headerlink" title="设置背景和网格"></a>设置背景和网格</h3><p>在<code>antv/x6</code>之中，可以通过 <code>background</code> 和 <code>grid</code> 两个配置来设置画布的背景以及网格。</p>
 <h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>首先我们来看背景，他有多种情况。</p>
@@ -753,7 +753,7 @@ onMounted(() =&gt; {
     <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">40</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://forever0714yuan.github.io/2023/04/05/antv-x6/image-20230412202630050.png" alt="image-20230412202630050"></p>
+<p><img src="/2023/04/05/antv-x6/image-20230412202630050.png" alt="image-20230412202630050"></p>
 <h4 id="圆形"><a href="#圆形" class="headerlink" title="圆形"></a>圆形</h4><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">graph<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">addNode</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     <span class="token literal-property property">shape</span><span class="token operator">:</span> <span class="token string">"circle"</span><span class="token punctuation">,</span>
     <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">"矩形"</span><span class="token punctuation">,</span>
@@ -763,7 +763,7 @@ onMounted(() =&gt; {
     <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">40</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://forever0714yuan.github.io/2023/04/05/antv-x6/image-20230412202717215.png" alt="image-20230412202717215"> </p>
+<p><img src="/2023/04/05/antv-x6/image-20230412202717215.png" alt="image-20230412202717215"> </p>
 <h3 id="定制节点"><a href="#定制节点" class="headerlink" title="定制节点"></a>定制节点</h3><p>可以通过 <code>markup</code> 和 <code>attrs</code> 来定制节点的形状和样式，<code>markup</code> 可以类比 <code>HTML</code>，<code>attrs</code> 类比 <code>CSS</code>。强烈建议仔细阅读 <a target="_blank" rel="noopener" href="https://x6.antv.antgroup.com/zh/docs/api/model/cell#markup">markup</a> 和 <a target="_blank" rel="noopener" href="https://x6.antv.antgroup.com/zh/docs/api/model/cell#attrs">attrs</a> 文档。</p>
 <p>但是个人认为这个适合做一些简单的节点，如果复杂的节点，推荐使用<code>vue</code>节点，后面会介绍到。</p>
 <h3 id="修改节点"><a href="#修改节点" class="headerlink" title="修改节点"></a>修改节点</h3><p>在我们创建完成之后，还能够对节点进行一定的修改,我们还可以通过 API 修改节点的所有属性。我们会常用到下面两个方法：</p>
@@ -864,7 +864,7 @@ nodes<span class="token punctuation">.</span><span class="token function">forEac
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>数组代表的是<code>x</code>轴和<code>y</code>轴。</p>
-<p><img src="https://forever0714yuan.github.io/2023/04/05/antv-x6/image-20230417162450440.png" alt="image-20230417162450440"></p>
+<p><img src="/2023/04/05/antv-x6/image-20230417162450440.png" alt="image-20230417162450440"></p>
 <h4 id="vertices"><a href="#vertices" class="headerlink" title="vertices"></a>vertices</h4><p>路径点。边从起始点开始，按顺序经过路径点，最后到达终止点。</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">graph<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">addEdge</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token literal-property property">source</span><span class="token operator">:</span> <span class="token string">'rect1'</span><span class="token punctuation">,</span>
@@ -875,7 +875,7 @@ nodes<span class="token punctuation">.</span><span class="token function">forEac
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://forever0714yuan.github.io/2023/04/05/antv-x6/image-20230417162610575.png" alt="image-20230417162610575"></p>
+<p><img src="/2023/04/05/antv-x6/image-20230417162610575.png" alt="image-20230417162610575"></p>
 <h4 id="router"><a href="#router" class="headerlink" title="router"></a>router</h4><p>路由 <code>router</code> 将对 <code>vertices</code> 进一步处理，并在必要时添加额外的点，然后返回处理后的点。</p>
 <h5 id="orth"><a href="#orth" class="headerlink" title="orth"></a>orth</h5><p>正交路由，该路由在路径上添加额外的一些点，使边的每一条线段都水平或垂直正交。</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">graph<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">addEdge</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -895,7 +895,7 @@ nodes<span class="token punctuation">.</span><span class="token function">forEac
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://forever0714yuan.github.io/2023/04/05/antv-x6/image-20230417163941802.png" alt="image-20230417163941802"></p>
+<p><img src="/2023/04/05/antv-x6/image-20230417163941802.png" alt="image-20230417163941802"></p>
 <p>那两个圆圈的地方就是我们自己设置的<code>vertices</code>，其他的都是定义<code>orth</code>路由,自动生成的。</p>
 <p>其他的版本可以看<a target="_blank" rel="noopener" href="https://x6.antv.antgroup.com/api/registry/router#normal">官网</a></p>
 <h4 id="manhattan"><a href="#manhattan" class="headerlink" title="manhattan"></a>manhattan</h4><p>曼哈顿路由 <code>'manhattan'</code> 路由是正交路由 <code>'orth'</code> 的智能版本，该路由由水平或垂直的正交线段组成，并自动避开路径上的其他节点（障碍）。</p>
@@ -934,7 +934,7 @@ nodes<span class="token punctuation">.</span><span class="token function">forEac
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://forever0714yuan.github.io/2023/04/05/antv-x6/image-20230417164818737.png" alt="image-20230417164818737"></p>
+<p><img src="/2023/04/05/antv-x6/image-20230417164818737.png" alt="image-20230417164818737"></p>
 <h3 id="定制边"><a href="#定制边" class="headerlink" title="定制边"></a>定制边</h3><h4 id="基类派生"><a href="#基类派生" class="headerlink" title="基类派生"></a>基类派生</h4><p>定制箭头有两种方式，一种是使用从基类派生出我们的边，并重写某些样式和方法。详细可以看<a target="_blank" rel="noopener" href="https://antv-x6.gitee.io/en/docs/tutorial/intermediate/custom-edge"><code>antv/x6 1.0</code></a> 版本，在2.0版本中没有明确说明这种方式。</p>
 <pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Shape <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@antv/x6"</span><span class="token punctuation">;</span>
 
@@ -1254,7 +1254,7 @@ edge<span class="token punctuation">.</span><span class="token function">attr</s
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/03/18/2d-he-3d-zhuan-huan/">
+                <a href="/2023/03/18/2d-he-3d-zhuan-huan-copy-2/">
                     <div class="card-image">
                         
                         
@@ -1460,7 +1460,7 @@ edge<span class="token punctuation">.</span><span class="token function">attr</s
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">43.6k</span>
+                        class="white-color">54k</span>
             
             
             

@@ -422,8 +422,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="弹性布局概述"><a href="#弹性布局概述" class="headerlink" title="弹性布局概述"></a>弹性布局概述</h2><h3 id="弹性布局介绍"><a href="#弹性布局介绍" class="headerlink" title="弹性布局介绍"></a>弹性布局介绍</h3><p>网页布局的传统解决方案，基于盒子模型 + 浮动 + 定位实现。它对于那些特殊布局非常不方便，比如，垂直居中就不容易实现。<br><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1626945297075-aefe8794-565f-4985-badc-aeae9cb20d14.png" alt="image.png"></p>
-<p>2009年，W3C提出了一种新的方案—Flex布局(弹性布局)，可以简便、完整、响应式地实现各种页面布局。现在，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能。支持 Flex 布局的浏览器<br><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1626945297103-950a8e35-c617-4a6c-bc63-ea1566e63e97.png" alt="image.png"></p>
+                <h2 id="弹性布局概述"><a href="#弹性布局概述" class="headerlink" title="弹性布局概述"></a>弹性布局概述</h2><h3 id="弹性布局介绍"><a href="#弹性布局介绍" class="headerlink" title="弹性布局介绍"></a>弹性布局介绍</h3><p>网页布局的传统解决方案，基于盒子模型 + 浮动 + 定位实现。它对于那些特殊布局非常不方便，比如，垂直居中就不容易实现。<br><img src="/2023/03/18/dan-xing-bu-ju-flex/1626945297075-aefe8794-565f-4985-badc-aeae9cb20d14.png" alt="image.png"></p>
+<p>2009年，W3C提出了一种新的方案—Flex布局(弹性布局)，可以简便、完整、响应式地实现各种页面布局。现在，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能。支持 Flex 布局的浏览器<br><img src="/2023/03/18/dan-xing-bu-ju-flex/1626945297103-950a8e35-c617-4a6c-bc63-ea1566e63e97.png" alt="image.png"></p>
 <p>弹性布局已经成为布局的首选方案，本章介绍弹性布局的使用方式。</p>
 <h3 id="弹性布局概念"><a href="#弹性布局概念" class="headerlink" title="弹性布局概念"></a>弹性布局概念</h3><p>Flex 布局是在 CSS3 中引入的，又称为<strong>弹性盒模型</strong>。该模型决定一个盒子在其他盒子中的分布方式以及如何处理可用的空间。</p>
 <p>Flex 布局对于设计比较复杂的页面非常有用，可以<strong>轻松实现屏幕和浏览器窗口大小发生变化时保持元素的相对位置和大小不变</strong>，<strong>同时减少了依赖浮动布局实现元素位置的定义以及重置元素的大小</strong>。</p>
@@ -491,7 +491,7 @@
 <li>row（默认值）：主轴为水平方向，起点在左端。</li>
 <li>row-reverse：主轴为水平方向，起点在右端。</li>
 </ul>
-<p>每个属性的演示效果如图所示<br><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1627033050797-2aad3f5b-f0d7-4384-9fe8-2c962a3b8e54.png" alt="image.png"></p>
+<p>每个属性的演示效果如图所示<br><img src="/2023/03/18/dan-xing-bu-ju-flex/1627033050797-2aad3f5b-f0d7-4384-9fe8-2c962a3b8e54.png" alt="image.png"></p>
 <p>下面我们来演示下 flex-direction 的使用，通过flex-direction可以方便排列子项目的排列方式，我们通过 flex 的方式让 ul 里的 li 横向排列，页面的结构代码如下：</p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
@@ -508,12 +508,12 @@
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">ul</span> <span class="token punctuation">{</span>
   <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>页面运行的效果如图所示。<br><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1627261761553-7d8f7aa9-dfe5-46fe-aef3-64e4fc287a8d.png" alt="image.png"><br>通过图可以看到li已经横向展示，这里我们没有设置 flex-direction，该属默认值是row，也就是在主轴(当前是水平方向)上排列flex项目(当前是li)。<br>接下来把容器的flex-direction属性设置为row-reverse观察运行效果，代码如下：</p>
+<p>页面运行的效果如图所示。<br><img src="/2023/03/18/dan-xing-bu-ju-flex/1627261761553-7d8f7aa9-dfe5-46fe-aef3-64e4fc287a8d.png" alt="image.png"><br>通过图可以看到li已经横向展示，这里我们没有设置 flex-direction，该属默认值是row，也就是在主轴(当前是水平方向)上排列flex项目(当前是li)。<br>接下来把容器的flex-direction属性设置为row-reverse观察运行效果，代码如下：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">ul</span> <span class="token punctuation">{</span>
   <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
   <span class="token property">flex-direction</span><span class="token punctuation">:</span> row-reverse<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>运行效果如所示。<br><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1627262009585-5764266f-9e40-47e3-886c-081fd963422d.png" alt="image.png"><br>通过图2-5我们可以看到flex-direction的值为row-reverse的时候是从最右端开始排列flex项目，也就是从主轴的方向是从右向左。<br>当flex-direction的值为column的时候，主轴的方向改变为垂直方向，交叉轴改变为水平方向。接下来你可以尝试把flex-direction改变为其它两个值观察效果。</p>
+<p>运行效果如所示。<br><img src="/2023/03/18/dan-xing-bu-ju-flex/1627262009585-5764266f-9e40-47e3-886c-081fd963422d.png" alt="image.png"><br>通过图2-5我们可以看到flex-direction的值为row-reverse的时候是从最右端开始排列flex项目，也就是从主轴的方向是从右向左。<br>当flex-direction的值为column的时候，主轴的方向改变为垂直方向，交叉轴改变为水平方向。接下来你可以尝试把flex-direction改变为其它两个值观察效果。</p>
 <h3 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a>justify-content</h3><p>justify-content 属性定义了项目(子元素)在主轴上的对齐方式，该属性的语法如下：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.box</span> <span class="token punctuation">{</span>
   <span class="token property">justify-content</span><span class="token punctuation">:</span> flex-start | flex-end | center | space-between | space-around<span class="token punctuation">;</span>
@@ -526,7 +526,7 @@
 <li>space-between：两端对齐，项目之间的间隔都相等。</li>
 <li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
 </ul>
-<p>通过图所示你可以清晰的看到该属性的不同取值时子元素的排列方向。<br><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1627263651453-3979638f-b362-480f-8bd1-2e85437749e7.png" alt="image.png"></p>
+<p>通过图所示你可以清晰的看到该属性的不同取值时子元素的排列方向。<br><img src="/2023/03/18/dan-xing-bu-ju-flex/1627263651453-3979638f-b362-480f-8bd1-2e85437749e7.png" alt="image.png"></p>
 <h3 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a>align-items</h3><p>align-items 属性定义项目在交叉轴上如何对齐，该属性语法如下：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.box</span> <span class="token punctuation">{</span>
   <span class="token property">align-items</span><span class="token punctuation">:</span> flex-start | flex-end | center | baseline | stretch<span class="token punctuation">;</span>
@@ -539,7 +539,7 @@
 <li>baseline: 项目的第一行文字的基线对齐。</li>
 <li><strong>stretch（默认值）</strong>：如果项目未设置高度或设为auto，将占满整个容器的高度。</li>
 </ul>
-<p>通过图所示你可以清晰的看到该属性的不同取值时子元素的排列方向。<br><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1627264435742-0d5b950f-0e08-43ed-9a18-24c33fe081ed.png" alt="image.png"></p>
+<p>通过图所示你可以清晰的看到该属性的不同取值时子元素的排列方向。<br><img src="/2023/03/18/dan-xing-bu-ju-flex/1627264435742-0d5b950f-0e08-43ed-9a18-24c33fe081ed.png" alt="image.png"></p>
 <h3 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap"></a>flex-wrap</h3><p>默认情况下，项目都排在一条线（又称”轴线”）上。flex-wrap属性定义，如果一条轴线排不下，如何换行，该属性语法如下：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.box</span><span class="token punctuation">{</span>
   <span class="token property">flex-wrap</span><span class="token punctuation">:</span> nowrap | wrap | wrap-reverse<span class="token punctuation">;</span>
@@ -548,15 +548,15 @@
 <ul>
 <li>nowrap(默认值)：不换行，如图所示。</li>
 </ul>
-<p><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1627265568244-400c856b-91be-43d4-af20-fc46220ca604.png" alt="image.png"></p>
+<p><img src="/2023/03/18/dan-xing-bu-ju-flex/1627265568244-400c856b-91be-43d4-af20-fc46220ca604.png" alt="image.png"></p>
 <ul>
 <li>wrap：换行，第一行在上方，如图所示。</li>
 </ul>
-<p><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1627265574846-6211c69d-cc65-4032-87f8-16bd4f367706.png" alt="image.png"></p>
+<p><img src="/2023/03/18/dan-xing-bu-ju-flex/1627265574846-6211c69d-cc65-4032-87f8-16bd4f367706.png" alt="image.png"></p>
 <ul>
 <li>wrap-reverse：换行，第一行在下方，如图所示。</li>
 </ul>
-<p><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1627265583630-4029c7b2-9823-438b-9aa9-f7f5654110a4.png" alt="image.png"></p>
+<p><img src="/2023/03/18/dan-xing-bu-ju-flex/1627265583630-4029c7b2-9823-438b-9aa9-f7f5654110a4.png" alt="image.png"></p>
 <h3 id="flex-flow"><a href="#flex-flow" class="headerlink" title="flex-flow"></a>flex-flow</h3><p>flex-flow 属性是 flex-direction 属性和 flex-wrap 属性的简写形式，默认值为 row nowrap，该属性语法如下：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.box</span> <span class="token punctuation">{</span>
   <span class="token property">flex-flow</span><span class="token punctuation">:</span> &lt;flex-direction&gt; || &lt;flex-wrap&gt;<span class="token punctuation">;</span>
@@ -574,7 +574,7 @@
 <li>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
 <li>stretch（默认值）：轴线占满整个交叉轴。</li>
 </ul>
-<p>通过图所示你可以清晰的看到该属性的不同取值时子元素的排列方向。<br><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1627266025656-d9276411-8b1c-4c51-8ea5-a4ed5dec9528.png" alt="image.png"></p>
+<p>通过图所示你可以清晰的看到该属性的不同取值时子元素的排列方向。<br><img src="/2023/03/18/dan-xing-bu-ju-flex/1627266025656-d9276411-8b1c-4c51-8ea5-a4ed5dec9528.png" alt="image.png"></p>
 <h2 id="Flex-项目属性"><a href="#Flex-项目属性" class="headerlink" title="Flex 项目属性"></a>Flex 项目属性</h2><p>Flex项目有6个属性，分别是：</p>
 <ul>
 <li>order</li>
@@ -587,16 +587,16 @@
 <p>下面我们依次来解释，这里重点掌握两个属性分别是：<strong>order 和 flex</strong>。</p>
 <h3 id="order"><a href="#order" class="headerlink" title="order"></a>order</h3><p>order属性定义项目的排列顺序。数值越小，排列越靠前，<strong>默认为0</strong>，该属性语法如下：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.item</span> <span class="token punctuation">{</span>  <span class="token property">order</span><span class="token punctuation">:</span> &lt;integer&gt;<span class="token punctuation">;</span> <span class="token punctuation">}</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>下图演示该属性为不同值时项目的排列。<br><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1627266509296-2fb0c4c3-ec68-4391-b039-a27604d395d6.png" alt="image.png"></p>
+<p>下图演示该属性为不同值时项目的排列。<br><img src="/2023/03/18/dan-xing-bu-ju-flex/1627266509296-2fb0c4c3-ec68-4391-b039-a27604d395d6.png" alt="image.png"></p>
 <h3 id="align-self"><a href="#align-self" class="headerlink" title="align-self"></a>align-self</h3><p>align-self属性允许单个项目在交叉轴上有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch，该属性语法如下：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.item</span> <span class="token punctuation">{</span>  <span class="token property">align-self</span><span class="token punctuation">:</span> auto | flex-start | flex-end | center | baseline | stretch<span class="token punctuation">;</span> <span class="token punctuation">}</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>该属性可能取6个值，除了auto，其他都与align-items属性完全一致，演示效果如图所示。<br><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1627266509257-c97ed77a-efec-419e-a0b5-4f80f9c9a737.png" alt="image.png"></p>
+<p>该属性可能取6个值，除了auto，其他都与align-items属性完全一致，演示效果如图所示。<br><img src="/2023/03/18/dan-xing-bu-ju-flex/1627266509257-c97ed77a-efec-419e-a0b5-4f80f9c9a737.png" alt="image.png"></p>
 <h3 id="flex-grow"><a href="#flex-grow" class="headerlink" title="flex-grow"></a>flex-grow</h3><p>flex-grow属性定义项目的放大比例，<strong>默认为0，即如果存在剩余空间，也不放大</strong>，该属性语法如下：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.item</span> <span class="token punctuation">{</span>   <span class="token property">flex-grow</span><span class="token punctuation">:</span> &lt;number&gt;<span class="token punctuation">;</span> <span class="token comment">/* default 0 */</span> <span class="token punctuation">}</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。效果如图所示。<br><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1627266509344-36c4f5c9-09f7-456a-a077-c9d49c93c3f3.png" alt="image.png"></p>
+<p>如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。效果如图所示。<br><img src="/2023/03/18/dan-xing-bu-ju-flex/1627266509344-36c4f5c9-09f7-456a-a077-c9d49c93c3f3.png" alt="image.png"></p>
 <h3 id="flex-shrink"><a href="#flex-shrink" class="headerlink" title="flex-shrink"></a>flex-shrink</h3><p>flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小，该属性语法如下：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.item</span> <span class="token punctuation">{</span>   <span class="token property">flex-shrink</span><span class="token punctuation">:</span> &lt;number&gt;<span class="token punctuation">;</span> <span class="token comment">/* default 1 */</span> <span class="token punctuation">}</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink<strong>属性为0</strong>，其他项目都为1，<strong>则空间不足时，前者不缩小</strong>。负值对该属性无效，效果如图所示。<br><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1627266509363-58ae4294-89dc-492f-9311-e31fc88570ef.png" alt="image.png"></p>
+<p>如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink<strong>属性为0</strong>，其他项目都为1，<strong>则空间不足时，前者不缩小</strong>。负值对该属性无效，效果如图所示。<br><img src="/2023/03/18/dan-xing-bu-ju-flex/1627266509363-58ae4294-89dc-492f-9311-e31fc88570ef.png" alt="image.png"></p>
 <h3 id="flex-basis"><a href="#flex-basis" class="headerlink" title="flex-basis"></a>flex-basis</h3><p>flex-basis  指定了 flex 元素在主轴方向上的初始大小。该属性语法如下：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.item</span> <span class="token punctuation">{</span>   <span class="token property">flex-basis</span><span class="token punctuation">:</span> &lt;length&gt; | auto<span class="token punctuation">;</span> <span class="token comment">/* default auto */</span> <span class="token punctuation">}</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <blockquote>
@@ -605,7 +605,7 @@
 <h3 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h3><p>flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选，该属性语法如下：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.item</span> <span class="token punctuation">{</span>   <span class="token property">flex</span><span class="token punctuation">:</span> none | [ &lt;<span class="token string">'flex-grow'</span>&gt; &lt;<span class="token string">'flex-shrink'</span>&gt;? || &lt;<span class="token string">'flex-basis'</span>&gt; ] <span class="token punctuation">}</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。<br>建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。</p>
-<h2 id="案例1：圣杯布局"><a href="#案例1：圣杯布局" class="headerlink" title="案例1：圣杯布局"></a>案例1：圣杯布局</h2><p><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1646362980363-7e6015ec-79af-43f6-849a-3a7340d9dc44.png" alt="image.png"></p>
+<h2 id="案例1：圣杯布局"><a href="#案例1：圣杯布局" class="headerlink" title="案例1：圣杯布局"></a>案例1：圣杯布局</h2><p><img src="/2023/03/18/dan-xing-bu-ju-flex/1646362980363-7e6015ec-79af-43f6-849a-3a7340d9dc44.png" alt="image.png"></p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>header<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>header<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>main<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>nav<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">&gt;</span></span>
@@ -670,8 +670,8 @@ body</span> <span class="token punctuation">{</span>
 <li>主体部分的右侧图片整体模块是一个弹性盒子，伸缩换行为wrap，主轴的对齐方式为flex-start。</li>
 <li>使用弹性盒模型布局网页的尾部内容，伸缩流方向为column，主轴对齐方式和侧轴的对齐方式都是center。</li>
 </ul>
-<p><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1646376755729-7683ac20-4121-4ef3-bff3-ba6243237c02.png" alt="image.png"><br>宽屏浏览器下的显示效果<br><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1646376799815-ccdd08f9-2d9a-4b68-b36b-a18f9315e9bc.png" alt="image.png"><br>窄屏浏览器下的显示效果</p>
-<h3 id="制作头部"><a href="#制作头部" class="headerlink" title="制作头部"></a>制作头部</h3><p><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1646374827721-5eab7373-0347-4ec8-ac67-1536a48f430e.png" alt="image.png"></p>
+<p><img src="/2023/03/18/dan-xing-bu-ju-flex/1646376755729-7683ac20-4121-4ef3-bff3-ba6243237c02.png" alt="image.png"><br>宽屏浏览器下的显示效果<br><img src="/2023/03/18/dan-xing-bu-ju-flex/1646376799815-ccdd08f9-2d9a-4b68-b36b-a18f9315e9bc.png" alt="image.png"><br>窄屏浏览器下的显示效果</p>
+<h3 id="制作头部"><a href="#制作头部" class="headerlink" title="制作头部"></a>制作头部</h3><p><img src="/2023/03/18/dan-xing-bu-ju-flex/1646374827721-5eab7373-0347-4ec8-ac67-1536a48f430e.png" alt="image.png"></p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>header<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>logo<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>xx网站<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
@@ -725,7 +725,7 @@ body</span> <span class="token punctuation">{</span>
 <span class="token selector">.login a:hover</span> <span class="token punctuation">{</span>
   <span class="token property">color</span><span class="token punctuation">:</span> #a10000<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="主体部分"><a href="#主体部分" class="headerlink" title="主体部分"></a>主体部分</h3><p><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1646375751849-9f70bb35-09f4-4a32-bc1c-b8fa95e0e339.png" alt="image.png"></p>
+<h3 id="主体部分"><a href="#主体部分" class="headerlink" title="主体部分"></a>主体部分</h3><p><img src="/2023/03/18/dan-xing-bu-ju-flex/1646375751849-9f70bb35-09f4-4a32-bc1c-b8fa95e0e339.png" alt="image.png"></p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrapper<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>main<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
@@ -826,7 +826,7 @@ body</span> <span class="token punctuation">{</span>
   <span class="token property">margin-right</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
   <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="版权部分"><a href="#版权部分" class="headerlink" title="版权部分"></a>版权部分</h3><p><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1646376875110-158ce364-d670-405c-8af7-51c024ff7b6f.png" alt="image.png"></p>
+<h3 id="版权部分"><a href="#版权部分" class="headerlink" title="版权部分"></a>版权部分</h3><p><img src="/2023/03/18/dan-xing-bu-ju-flex/1646376875110-158ce364-d670-405c-8af7-51c024ff7b6f.png" alt="image.png"></p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>footer<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>公司介绍<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
@@ -863,8 +863,8 @@ body</span> <span class="token punctuation">{</span>
 <span class="token selector">.footer p</span> <span class="token punctuation">{</span>
   <span class="token property">line-height</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="案例3：动态菜单"><a href="#案例3：动态菜单" class="headerlink" title="案例3：动态菜单"></a>案例3：动态菜单</h2><p><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1646379783669-18d676ae-8d69-49b9-8576-0d23bb572022.png" alt="image.png"></p>
-<p><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1646379773522-d9105d39-5941-417d-b605-5208a1017c71.png" alt="image.png"><br><img src="https://forever0714yuan.github.io/2023/03/18/dan-xing-bu-ju-flex/1646379757490-5530a7dd-e917-4ac4-bc01-c7a78587a59a.png" alt="image.png"></p>
+<h2 id="案例3：动态菜单"><a href="#案例3：动态菜单" class="headerlink" title="案例3：动态菜单"></a>案例3：动态菜单</h2><p><img src="/2023/03/18/dan-xing-bu-ju-flex/1646379783669-18d676ae-8d69-49b9-8576-0d23bb572022.png" alt="image.png"></p>
+<p><img src="/2023/03/18/dan-xing-bu-ju-flex/1646379773522-d9105d39-5941-417d-b605-5208a1017c71.png" alt="image.png"><br><img src="/2023/03/18/dan-xing-bu-ju-flex/1646379757490-5530a7dd-e917-4ac4-bc01-c7a78587a59a.png" alt="image.png"></p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>menu<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
@@ -1202,13 +1202,13 @@ body</span> <span class="token punctuation">{</span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/03/18/fu-dong-an-li/">
+                <a href="/2023/03/18/fu-dong/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="浮动案例">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="浮动">
                         
-                        <span class="card-title">浮动案例</span>
+                        <span class="card-title">浮动</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1408,7 +1408,7 @@ body</span> <span class="token punctuation">{</span>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">43.6k</span>
+                        class="white-color">54k</span>
             
             
             
