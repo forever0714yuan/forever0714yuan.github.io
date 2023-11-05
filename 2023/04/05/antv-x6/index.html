@@ -385,7 +385,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-30
+                    2023-11-05
                 </div>
                 
 
@@ -423,9 +423,9 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="Antv-X6"><a href="#Antv-X6" class="headerlink" title="Antv/X6"></a>Antv/X6</h1><p>这里的背景是以<code>vue3.2+antv/x6 2.8</code> 为背景的学习，官网的文档是使用<code>react</code>书写的案例，需要摸索的地方还是有很多，下面开始</p>
-<h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><p>假设你已经创建了<code>vue</code> ，如果不清楚怎么创建<code>vue</code>项目，建议前往官网学习<a target="_blank" rel="noopener" href="https://cn.vuejs.org/">Vue</a>。使用组合式<code>API</code>开发，为了简便，没有使用路由等东西，就是使用<code>TS + Less</code>，但是TS使用的很烂，有问题拜托指出，谢谢。</p>
+<h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><p>假设你已经创建了<code>vue</code> ，如果不清楚怎么创建<code>vue</code>项目，建议前往官网学习<a target="_blank" rel="noopener" href="https://cn.vuejs.org/">Vue</a>。使用组合式<code>API</code>开发，为了简便，没有使用路由等东西，就是使用<code>TS + Less</code>，但是 TS 使用的很烂，有问题拜托指出，谢谢。</p>
 <h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><p>接下来我们就开始使用</p>
-<h3 id="安装X6"><a href="#安装X6" class="headerlink" title="安装X6"></a>安装X6</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># npm</span>
+<h3 id="安装-X6"><a href="#安装-X6" class="headerlink" title="安装 X6"></a>安装 X6</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># npm</span>
 $ <span class="token function">npm</span> <span class="token function">install</span> @antv/x6 <span class="token parameter variable">--save</span>
 
 <span class="token comment"># yarn</span>
@@ -434,14 +434,12 @@ $ <span class="token function">yarn</span> <span class="token function">add</spa
 <h3 id="初始化画布"><a href="#初始化画布" class="headerlink" title="初始化画布"></a>初始化画布</h3><h4 id="创建容器"><a href="#创建容器" class="headerlink" title="创建容器"></a>创建容器</h4><p>首先我们要创建我们的画布容器，我们使用了<code>id</code>为<code>container</code>的<code>div</code>来当我们的容器</p>
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
   &lt;div class="graph"&gt;
-      &lt;!-- 1.创建容器 --&gt;
+    &lt;!-- 1.创建容器 --&gt;
     &lt;div id="container" class="container"&gt;&lt;/div&gt;
   &lt;/div&gt;
-&lt;/template&gt;
+&lt;/template&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="引入antv-x6"><a href="#引入antv-x6" class="headerlink" title="引入antv/x6"></a>引入antv/x6</h4><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;script setup lang="ts"&gt;
+<h4 id="引入-antv-x6"><a href="#引入-antv-x6" class="headerlink" title="引入 antv/x6"></a>引入 antv/x6</h4><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;script setup lang="ts"&gt;
 // 1.引入vue和antv/x6
 import { ref, onMounted } from "vue";
 import { Graph } from "@antv/x6";
@@ -456,7 +454,7 @@ onMounted(() =&gt; {
     width: 800,
     height: 600,
     background: {
-      color: "#F2F7FA",// 设置画布的背景颜色。
+      color: "#F2F7FA", // 设置画布的背景颜色。
     },
   });
 });
@@ -477,37 +475,37 @@ onMounted(() =&gt; {
 const data = {
   nodes: [
     {
-      id: 'node1',
-      shape: 'rect',
+      id: "node1",
+      shape: "rect",
       x: 40,
       y: 40,
       width: 100,
       height: 40,
-      label: 'hello',
+      label: "hello",
       attrs: {
         // body 是选择器名称，选中的是 rect 元素
         body: {
-          stroke: '#8f8f8f',
+          stroke: "#8f8f8f",
           strokeWidth: 1,
-          fill: '#fff',
+          fill: "#fff",
           rx: 6,
           ry: 6,
         },
       },
     },
     {
-      id: 'node2',
-      shape: 'rect',
+      id: "node2",
+      shape: "rect",
       x: 160,
       y: 180,
       width: 100,
       height: 40,
-      label: 'world',
+      label: "world",
       attrs: {
         body: {
-          stroke: '#8f8f8f',
+          stroke: "#8f8f8f",
           strokeWidth: 1,
-          fill: '#fff',
+          fill: "#fff",
           rx: 6,
           ry: 6,
         },
@@ -516,28 +514,28 @@ const data = {
   ],
   edges: [
     {
-      shape: 'edge',
-      source: 'node1',
-      target: 'node2',
-      label: 'x6',
+      shape: "edge",
+      source: "node1",
+      target: "node2",
+      label: "x6",
       attrs: {
         // line 是选择器名称，选中的边的 path 元素
         line: {
-          stroke: '#8f8f8f',
+          stroke: "#8f8f8f",
           strokeWidth: 1,
         },
       },
     },
   ],
-}
+};
 &lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>下面我们来解释一下上面一坨代码的含义，其实大部分内容是重复的。我们从节点（nodes）开始.</p>
-<h5 id="nodes解释"><a href="#nodes解释" class="headerlink" title="nodes解释"></a>nodes解释</h5><ul>
-<li><code>id</code>，节点的唯一标识，如果不指定节点，那么x6会自动给我们生成ID。</li>
-<li><code>shape</code>，指定节点的图形，x6给我们提供了很多的<a target="_blank" rel="noopener" href="https://x6.antv.antgroup.com/tutorial/basic/node">内置节点</a>，比如我们这里使用的就是矩形。</li>
-<li><code>x</code>，x轴，在画布中水平向右为x轴正方向，垂直x轴向下为y轴正方向。此处指的就是节点在画布中x轴的位置。</li>
-<li><code>y</code>，在画布中y轴的位置。</li>
+<h5 id="nodes-解释"><a href="#nodes-解释" class="headerlink" title="nodes 解释"></a>nodes 解释</h5><ul>
+<li><code>id</code>，节点的唯一标识，如果不指定节点，那么 x6 会自动给我们生成 ID。</li>
+<li><code>shape</code>，指定节点的图形，x6 给我们提供了很多的<a target="_blank" rel="noopener" href="https://x6.antv.antgroup.com/tutorial/basic/node">内置节点</a>，比如我们这里使用的就是矩形。</li>
+<li><code>x</code>，x 轴，在画布中水平向右为 x 轴正方向，垂直 x 轴向下为 y 轴正方向。此处指的就是节点在画布中 x 轴的位置。</li>
+<li><code>y</code>，在画布中 y 轴的位置。</li>
 <li><code>width</code>，节点的宽度</li>
 <li><code>height</code>，节点的高度</li>
 <li><code>label</code>，节点中间的描述性文字</li>
@@ -550,7 +548,7 @@ const data = {
 </ul>
 </li>
 </ul>
-<h5 id="edges解释"><a href="#edges解释" class="headerlink" title="edges解释"></a>edges解释</h5><ul>
+<h5 id="edges-解释"><a href="#edges-解释" class="headerlink" title="edges 解释"></a>edges 解释</h5><ul>
 <li><p><code>shape</code>，指定边的类型</p>
 </li>
 <li><p><code>source</code>，源节点或者起始节点</p>
@@ -562,7 +560,7 @@ const data = {
 <li><p><code>attrs</code>，<code>line </code>是选择器名称，选中的边的 <code>path</code> 元素</p>
 </li>
 </ul>
-<h4 id="渲染"><a href="#渲染" class="headerlink" title="渲染"></a>渲染</h4><p>当我们定义好节点之后，我们就要开始渲染了。因为在<code>Vue3</code>之中，在<code>onMounted</code>之中才能拿到Dom节点，所以我们也需要再<code>onMounted</code>之中，才能拿到Dom赋值。</p>
+<h4 id="渲染"><a href="#渲染" class="headerlink" title="渲染"></a>渲染</h4><p>当我们定义好节点之后，我们就要开始渲染了。因为在<code>Vue3</code>之中，在<code>onMounted</code>之中才能拿到 Dom 节点，所以我们也需要再<code>onMounted</code>之中，才能拿到 Dom 赋值。</p>
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;script setup lang="ts"&gt;
 // 1.引入vue和antv/x6
 import { ref, onMounted } from "vue";
@@ -578,7 +576,7 @@ onMounted(() =&gt; {
     width: 800,
     height: 600,
     background: {
-      color: "#F2F7FA",// 设置画布的背景颜色。
+      color: "#F2F7FA", // 设置画布的背景颜色。
     },
   });
   // 5.加载数据
@@ -590,10 +588,10 @@ onMounted(() =&gt; {
 <p><img src="/2023/04/05/antv-x6/image-20230409141559243.png" alt="image-20230409141559243"></p>
 <p>我们在上面使用的时候，看到<code>graph.value.fromJSON(data);</code>这种用法，总是先<code>.value</code>之后再使用对应的方法，其实这个是因为我们创建变量的时候，使用的是<code>ref</code>创建的变量，使用<code>ref</code>创建的变量，只要不是在模版中使用，都是需要<code>.value</code>的。</p>
 <p>到这里，快速上手就完毕了，就是这么简单。</p>
-<h2 id="画布"><a href="#画布" class="headerlink" title="画布"></a>画布</h2><p> 画布布是在 X6 中用于展示和编辑图形的区域，类似于绘图板的概念。通过画布，可以创建、移动、编辑和删除图形，包括节点、连接线、文本等。</p>
+<h2 id="画布"><a href="#画布" class="headerlink" title="画布"></a>画布</h2><p>画布布是在 X6 中用于展示和编辑图形的区域，类似于绘图板的概念。通过画布，可以创建、移动、编辑和删除图形，包括节点、连接线、文本等。</p>
 <h3 id="画布自适应"><a href="#画布自适应" class="headerlink" title="画布自适应"></a>画布自适应</h3><p>我们在实例化<code>Graph</code>对象的时候，可以通过设置 <code>width</code> 和 <code>height</code> 固定画布大小，如果不设置，就会以画布容器大小初始化画布。但是我们有可能会遇到页面的 <code>resize</code> 事件，导致画布容器大小改变，导致画布元素显示异常。</p>
-<p><code>resize</code> 事件是JavaScript中一个针对浏览器窗口大小改变的事件。当用户调整浏览器窗口大小时，浏览器会触发 <code>resize</code> 事件，允许开发者在窗口大小改变时执行相关的代码。</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'resize'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<p><code>resize</code> 事件是 JavaScript 中一个针对浏览器窗口大小改变的事件。当用户调整浏览器窗口大小时，浏览器会触发 <code>resize</code> 事件，允许开发者在窗口大小改变时执行相关的代码。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"resize"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">// 处理窗口大小改变事件</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
@@ -609,8 +607,8 @@ const graph = ref();
 onMounted(() =&gt; {
   // 4.定义画布
   const graph = new Graph({
-      container: document.getElementById("container"),
-      autoResize: true,
+    container: document.getElementById("container"),
+    autoResize: true,
   });
   // 5.加载数据
   graph.value.fromJSON(data);
@@ -629,21 +627,21 @@ onMounted(() =&gt; {
 <li><code>'rgba(255, 255, 128, 0.5)'</code><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation">函数符</a>，红绿蓝透明度</li>
 <li><code>'hsla(50, 33%, 25%, 0.75)'</code></li>
 </ul>
-<p>​    <code>HSL</code>圆柱坐标系统是指一种颜色空间表示方式，其中HSL代表色相、饱和度和亮度，圆柱坐标则表示这些参数的变化。</p>
-<p>​    在<code>HSL</code>圆柱坐标系统中，<strong>色相</strong>是指颜色的种类或类别，如红色、黄色等，它沿着一个360度的色轮上变化。<strong>饱和度</strong>表示颜色的强度或纯度，取值范围为0到1，0表示灰度，1表示完全饱和。<strong>亮度</strong>则表示颜色的亮暗程度，取值范围同样为0到1，0表示黑色，1表示白色。最后一个值也是透明度，取值范围0到1。</p>
+<p>​ <code>HSL</code>圆柱坐标系统是指一种颜色空间表示方式，其中 HSL 代表色相、饱和度和亮度，圆柱坐标则表示这些参数的变化。</p>
+<p>​ 在<code>HSL</code>圆柱坐标系统中，<strong>色相</strong>是指颜色的种类或类别，如红色、黄色等，它沿着一个 360 度的色轮上变化。<strong>饱和度</strong>表示颜色的强度或纯度，取值范围为 0 到 1，0 表示灰度，1 表示完全饱和。<strong>亮度</strong>则表示颜色的亮暗程度，取值范围同样为 0 到 1，0 表示黑色，1 表示白色。最后一个值也是透明度，取值范围 0 到 1。</p>
 <ul>
 <li><code>'radial-gradient(shape size at position, red, green)'</code></li>
 </ul>
-<p>​    <code>radial-gradient</code>是<code>CSS3</code>中用来创建径向渐变效果的函数，使用radial-gradient函数可以创建从一个中心点向周围扩散的渐变效果。</p>
-<p>​    <strong>shape</strong>可以是<strong>circle</strong>（圆形）或<strong>ellipse</strong>（椭圆形），<strong>size</strong>可以是<strong>closest-side</strong>（最近的边）、<strong>closest-corner</strong>（最近的角）、<strong>farthest-side</strong>（最远的边）或<strong>farthest-corner</strong>（最远的角），<strong>position</strong>表示渐变的中心点位置（可以是一个像素值或一个百分比），<strong>start-color</strong>表示起始颜色，<strong>last-color</strong>表示终止颜色。</p>
+<p>​ <code>radial-gradient</code>是<code>CSS3</code>中用来创建径向渐变效果的函数，使用 radial-gradient 函数可以创建从一个中心点向周围扩散的渐变效果。</p>
+<p>​ <strong>shape</strong>可以是<strong>circle</strong>（圆形）或<strong>ellipse</strong>（椭圆形），<strong>size</strong>可以是<strong>closest-side</strong>（最近的边）、<strong>closest-corner</strong>（最近的角）、<strong>farthest-side</strong>（最远的边）或<strong>farthest-corner</strong>（最远的角），<strong>position</strong>表示渐变的中心点位置（可以是一个像素值或一个百分比），<strong>start-color</strong>表示起始颜色，<strong>last-color</strong>表示终止颜色。</p>
 <p>比如：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">radial-gradient</span><span class="token punctuation">(</span>circle<span class="token punctuation">,</span> #ff9d9d<span class="token punctuation">,</span> #fe2d2d<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>这将创建一个从中心向外扩散的圆形渐变效果，起始颜色为<code>#ff9d9d</code>，终止颜色为<code>#fe2d2d</code>。</p>
-<h5 id="image"><a href="#image" class="headerlink" title="image"></a>image</h5><p>背景图片的URL地址，这里需要值得注意的我们需要先导入,然后再使用</p>
+<h5 id="image"><a href="#image" class="headerlink" title="image"></a>image</h5><p>背景图片的 URL 地址，这里需要值得注意的我们需要先导入,然后再使用</p>
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;script setup lang="ts"&gt;
-import bgcImage from "@/assets/bg2.b4f49dec.png";
-    
+import bgcImage from "@/antv-x6/bg2.b4f49dec.png";
+
 onMounted(() =&gt; {
   graph.value = new Graph({
     container: document.getElementById("container") as HTMLElement,
@@ -655,25 +653,22 @@ onMounted(() =&gt; {
     autoResize: true,
   });
   graph.value.fromJSON(data);
-});    
-    
-&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+});
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="position"><a href="#position" class="headerlink" title="position"></a>position</h5><p>背景图片位置，支持所有 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position">CSS background-position</a> 属性的取值，默认为 <code>'center'</code>。</p>
-<h5 id="size"><a href="#size" class="headerlink" title="size"></a>size</h5><p> 背景图片大小，支持所有 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size">CSS background-size</a> 属性的取值，默认为 <code>'auto auto'</code>。</p>
+<h5 id="size"><a href="#size" class="headerlink" title="size"></a>size</h5><p>背景图片大小，支持所有 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size">CSS background-size</a> 属性的取值，默认为 <code>'auto auto'</code>。</p>
 <h6 id="repeat"><a href="#repeat" class="headerlink" title="repeat"></a>repeat</h6><p>背景图片重复方式，支持所有 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat">CSS background-repeat</a> 属性的取值，默认为 <code>'no-repeat' 不平铺</code>。</p>
 <p>另外，还支持以下几个预定义值：</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://x6.antv.antgroup.com/api/registry/background#watermark"><code>'watermark'</code></a> 水印效果。</li>
-</ul>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://x6.antv.antgroup.com/api/registry/background#flip-x"><code>'flip-x'</code></a> 水平翻转背景图片。</li>
-</ul>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://x6.antv.antgroup.com/api/registry/background#flip-y"><code>'flip-y'</code></a> 垂直翻转背景图片。</li>
-</ul>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://x6.antv.antgroup.com/api/registry/background#flip-xy"><code>'flip-xy'</code></a> 水平和垂直翻转背景图片。</li>
+<li><p><a target="_blank" rel="noopener" href="https://x6.antv.antgroup.com/api/registry/background#watermark"><code>'watermark'</code></a> 水印效果。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://x6.antv.antgroup.com/api/registry/background#flip-x"><code>'flip-x'</code></a> 水平翻转背景图片。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://x6.antv.antgroup.com/api/registry/background#flip-y"><code>'flip-y'</code></a> 垂直翻转背景图片。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://x6.antv.antgroup.com/api/registry/background#flip-xy"><code>'flip-xy'</code></a> 水平和垂直翻转背景图片。</p>
+</li>
 </ul>
 <h3 id="画布拖拽（平移）和缩放"><a href="#画布拖拽（平移）和缩放" class="headerlink" title="画布拖拽（平移）和缩放"></a>画布拖拽（平移）和缩放</h3><p>画布的拖拽和缩放通过 <code>panning</code> 和 <code>mousewheel</code> 配置来实现这两个功能</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> graph <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Graph</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -681,8 +676,6 @@ onMounted(() =&gt; {
   <span class="token literal-property property">panning</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
   <span class="token literal-property property">mousewheel</span><span class="token operator">:</span> <span class="token boolean">true</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
 
 <h2 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h2><p><code>X6</code> 是基于 <code>SVG</code> 的渲染引擎，可以使用不同的 <code>SVG </code>元素渲染节点和边，非常适合节点内容比较简单的场景。如果我们需要复杂的场景，那么我们可以通过<code>vue</code>节点来实现。</p>
 <h3 id="添加节点"><a href="#添加节点" class="headerlink" title="添加节点"></a>添加节点</h3><p>我们在最初的时候在<code>setup</code>中定义了一个<code>graph</code>属性，这个<code>graph</code>我们通过<code>new</code>创建了画布的对象。新增节点可以通过<code>addNode</code>方法，传入一个对象。</p>
@@ -697,8 +690,8 @@ onMounted(() =&gt; {
 
 <ul>
 <li><code>shape</code>，节点的图形</li>
-<li><code>x</code>，在画布中x轴的的位置</li>
-<li><code>y</code>，在画布中的y轴的位置</li>
+<li><code>x</code>，在画布中 x 轴的的位置</li>
+<li><code>y</code>，在画布中的 y 轴的位置</li>
 <li><code>width</code>，元素的宽度</li>
 <li><code>height</code>，元素的高度</li>
 <li><code>label</code>，矩形中间的文字</li>
@@ -707,7 +700,7 @@ onMounted(() =&gt; {
 <table>
 <thead>
 <tr>
-<th>shape名称</th>
+<th>shape 名称</th>
 <th>描述</th>
 </tr>
 </thead>
@@ -745,25 +738,25 @@ onMounted(() =&gt; {
 </tr>
 </tbody></table>
 <h4 id="矩形"><a href="#矩形" class="headerlink" title="矩形"></a>矩形</h4><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">graph<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">addNode</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    <span class="token literal-property property">shape</span><span class="token operator">:</span> <span class="token string">"rect"</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">"矩形"</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">40</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">40</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">shape</span><span class="token operator">:</span> <span class="token string">"rect"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">"矩形"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">40</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">40</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/05/antv-x6/image-20230412202630050.png" alt="image-20230412202630050"></p>
 <h4 id="圆形"><a href="#圆形" class="headerlink" title="圆形"></a>圆形</h4><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">graph<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">addNode</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    <span class="token literal-property property">shape</span><span class="token operator">:</span> <span class="token string">"circle"</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">"矩形"</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">40</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">40</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">shape</span><span class="token operator">:</span> <span class="token string">"circle"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">"矩形"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">40</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">40</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="/2023/04/05/antv-x6/image-20230412202717215.png" alt="image-20230412202717215"> </p>
+<p><img src="/2023/04/05/antv-x6/image-20230412202717215.png" alt="image-20230412202717215"></p>
 <h3 id="定制节点"><a href="#定制节点" class="headerlink" title="定制节点"></a>定制节点</h3><p>可以通过 <code>markup</code> 和 <code>attrs</code> 来定制节点的形状和样式，<code>markup</code> 可以类比 <code>HTML</code>，<code>attrs</code> 类比 <code>CSS</code>。强烈建议仔细阅读 <a target="_blank" rel="noopener" href="https://x6.antv.antgroup.com/zh/docs/api/model/cell#markup">markup</a> 和 <a target="_blank" rel="noopener" href="https://x6.antv.antgroup.com/zh/docs/api/model/cell#attrs">attrs</a> 文档。</p>
 <p>但是个人认为这个适合做一些简单的节点，如果复杂的节点，推荐使用<code>vue</code>节点，后面会介绍到。</p>
 <h3 id="修改节点"><a href="#修改节点" class="headerlink" title="修改节点"></a>修改节点</h3><p>在我们创建完成之后，还能够对节点进行一定的修改,我们还可以通过 API 修改节点的所有属性。我们会常用到下面两个方法：</p>
@@ -772,14 +765,14 @@ onMounted(() =&gt; {
 <li>node.attr(path, value)，详细使用见 <a target="_blank" rel="noopener" href="https://x6.antv.antgroup.com/zh/docs/api/model/cell#%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7-attrs">attr</a>。</li>
 </ul>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> node <span class="token operator">=</span> graph<span class="token punctuation">.</span><span class="token function">addNode</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  <span class="token literal-property property">shape</span><span class="token operator">:</span> <span class="token string">'rect'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">shape</span><span class="token operator">:</span> <span class="token string">"rect"</span><span class="token punctuation">,</span>
   <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
   <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">40</span><span class="token punctuation">,</span>
   <span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
   <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">'edge'</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span><span class="token function">prop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">"edge"</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span><span class="token function">prop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>比如：</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">source<span class="token punctuation">.</span><span class="token function">prop</span><span class="token punctuation">(</span><span class="token string">"size"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">120</span><span class="token punctuation">,</span> <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">50</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 修改元素的宽高</span>
@@ -787,16 +780,16 @@ source<span class="token punctuation">.</span><span class="token function">attr<
 
 <p>通常情况下，真实场景并不会像上面的示例，还给节点一个单独的名称，在实际过程中，我们一般是配合事件一起来进行使用，比如我们选中某个节点想要设置其边框颜色，他会自动监听画布中的点击事件，然后去进行对应的操作。</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">graph<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"cell:click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> e<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> cell<span class="token punctuation">,</span> view <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-   <span class="token comment">// cell 就是我们所需要的节点对象</span>
-   cell<span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"body/stroke"</span><span class="token punctuation">,</span> <span class="token string">"red"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// cell 就是我们所需要的节点对象</span>
+  cell<span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"body/stroke"</span><span class="token punctuation">,</span> <span class="token string">"red"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>或者说还有情况就是给画布中的所有对象都设置</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> nodes <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>graph<span class="token punctuation">.</span><span class="token function">getNodes</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 获取画布中的所有节点</span>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> nodes <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>graph<span class="token punctuation">.</span><span class="token function">getNodes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 获取画布中的所有节点</span>
 nodes<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">node</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> color <span class="token operator">=</span> Color<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHex</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    node<span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">'body/fill'</span><span class="token punctuation">,</span> color<span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  <span class="token keyword">const</span> color <span class="token operator">=</span> Color<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHex</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  node<span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"body/fill"</span><span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="边"><a href="#边" class="headerlink" title="边"></a>边</h2><h3 id="如何添加边"><a href="#如何添加边" class="headerlink" title="如何添加边"></a>如何添加边</h3><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript">graph<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">addEdge</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   shape<span class="token operator">:</span> <span class="token string">"edge"</span><span class="token punctuation">,</span>
@@ -817,13 +810,13 @@ nodes<span class="token punctuation">.</span><span class="token function">forEac
 <td align="left">source</td>
 <td align="left">TerminalData</td>
 <td align="left">-</td>
-<td align="left">源节点或起始点。其与节点的ID相同</td>
+<td align="left">源节点或起始点。其与节点的 ID 相同</td>
 </tr>
 <tr>
 <td align="left">target</td>
 <td align="left">TerminalData</td>
 <td align="left">-</td>
-<td align="left">目标节点或目标点。其与节点的ID相同</td>
+<td align="left">目标节点或目标点。其与节点的 ID 相同</td>
 </tr>
 <tr>
 <td align="left">vertices</td>
@@ -858,17 +851,17 @@ nodes<span class="token punctuation">.</span><span class="token function">forEac
 </tbody></table>
 <p>上面代码就是添加边的方法，<code>source</code>和<code>target</code>的值需要与节点的<code>ID</code>一致就可以将两个节点进行连接，如果你只是看看能不能创建边，其实还有种写法</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">graph<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">addEdge</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-   <span class="token literal-property property">shape</span><span class="token operator">:</span> <span class="token string">"edge"</span><span class="token punctuation">,</span>
-   <span class="token literal-property property">source</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-   <span class="token literal-property property">target</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">shape</span><span class="token operator">:</span> <span class="token string">"edge"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">source</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">target</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>数组代表的是<code>x</code>轴和<code>y</code>轴。</p>
 <p><img src="/2023/04/05/antv-x6/image-20230417162450440.png" alt="image-20230417162450440"></p>
 <h4 id="vertices"><a href="#vertices" class="headerlink" title="vertices"></a>vertices</h4><p>路径点。边从起始点开始，按顺序经过路径点，最后到达终止点。</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">graph<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">addEdge</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  <span class="token literal-property property">source</span><span class="token operator">:</span> <span class="token string">'rect1'</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">target</span><span class="token operator">:</span> <span class="token string">'rect2'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">source</span><span class="token operator">:</span> <span class="token string">"rect1"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">target</span><span class="token operator">:</span> <span class="token string">"rect2"</span><span class="token punctuation">,</span>
   <span class="token literal-property property">vertices</span><span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token punctuation">{</span> <span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">200</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">{</span> <span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">300</span><span class="token punctuation">,</span> <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">120</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -902,7 +895,7 @@ nodes<span class="token punctuation">.</span><span class="token function">forEac
 <p>同时需要注意的是，<code>manhattan </code>路由的特性是自动避开路径中的障碍物，如果出现无法避开的情况，就会自动降级到 <code>orth </code>路由，此时为了让开发者能够发现问题，在控制台增加了 <code>warn：Unable to execute manhattan algorithm, use orth instead</code>。</p>
 <p>这个在最新的官网已经注明了。</p>
 <p>如果你看着警告不爽，解决办法就是忽略参与计算的节点，但是这样就相当于没有<code>manhattan</code>就白用了一样。看自己选择吧。</p>
-<h5 id="labels和defaultLabel"><a href="#labels和defaultLabel" class="headerlink" title="labels和defaultLabel"></a>labels和defaultLabel</h5><pre class="line-numbers language-tsx" data-language="tsx"><code class="language-tsx">graph<span class="token punctuation">.</span><span class="token function">addEdge</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+<h5 id="labels-和-defaultLabel"><a href="#labels-和-defaultLabel" class="headerlink" title="labels 和 defaultLabel"></a>labels 和 defaultLabel</h5><pre class="line-numbers language-tsx" data-language="tsx"><code class="language-tsx">graph<span class="token punctuation">.</span><span class="token function">addEdge</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
       source<span class="token punctuation">,</span>
       target<span class="token punctuation">,</span>
       attrs<span class="token operator">:</span> <span class="token punctuation">{</span>
@@ -935,28 +928,28 @@ nodes<span class="token punctuation">.</span><span class="token function">forEac
   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2023/04/05/antv-x6/image-20230417164818737.png" alt="image-20230417164818737"></p>
-<h3 id="定制边"><a href="#定制边" class="headerlink" title="定制边"></a>定制边</h3><h4 id="基类派生"><a href="#基类派生" class="headerlink" title="基类派生"></a>基类派生</h4><p>定制箭头有两种方式，一种是使用从基类派生出我们的边，并重写某些样式和方法。详细可以看<a target="_blank" rel="noopener" href="https://antv-x6.gitee.io/en/docs/tutorial/intermediate/custom-edge"><code>antv/x6 1.0</code></a> 版本，在2.0版本中没有明确说明这种方式。</p>
+<h3 id="定制边"><a href="#定制边" class="headerlink" title="定制边"></a>定制边</h3><h4 id="基类派生"><a href="#基类派生" class="headerlink" title="基类派生"></a>基类派生</h4><p>定制箭头有两种方式，一种是使用从基类派生出我们的边，并重写某些样式和方法。详细可以看<a target="_blank" rel="noopener" href="https://antv-x6.gitee.io/en/docs/tutorial/intermediate/custom-edge"><code>antv/x6 1.0</code></a> 版本，在 2.0 版本中没有明确说明这种方式。</p>
 <pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Shape <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@antv/x6"</span><span class="token punctuation">;</span>
 
 <span class="token comment">//1. 派生出自己的边样式</span>
 <span class="token keyword">const</span> MyEdge <span class="token operator">=</span> Shape<span class="token punctuation">.</span><span class="token function">Edge</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   markup<span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token punctuation">{</span>
-      tagName<span class="token operator">:</span> <span class="token string">'path'</span><span class="token punctuation">,</span>
-      selector<span class="token operator">:</span> <span class="token string">'wrap'</span><span class="token punctuation">,</span>
+      tagName<span class="token operator">:</span> <span class="token string">"path"</span><span class="token punctuation">,</span>
+      selector<span class="token operator">:</span> <span class="token string">"wrap"</span><span class="token punctuation">,</span>
       attrs<span class="token operator">:</span> <span class="token punctuation">{</span>
-        fill<span class="token operator">:</span> <span class="token string">'none'</span><span class="token punctuation">,</span>
-        cursor<span class="token operator">:</span> <span class="token string">'pointer'</span><span class="token punctuation">,</span>
-        stroke<span class="token operator">:</span> <span class="token string">'transparent'</span><span class="token punctuation">,</span>
-        strokeLinecap<span class="token operator">:</span> <span class="token string">'round'</span><span class="token punctuation">,</span>
+        fill<span class="token operator">:</span> <span class="token string">"none"</span><span class="token punctuation">,</span>
+        cursor<span class="token operator">:</span> <span class="token string">"pointer"</span><span class="token punctuation">,</span>
+        stroke<span class="token operator">:</span> <span class="token string">"transparent"</span><span class="token punctuation">,</span>
+        strokeLinecap<span class="token operator">:</span> <span class="token string">"round"</span><span class="token punctuation">,</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">{</span>
-      tagName<span class="token operator">:</span> <span class="token string">'path'</span><span class="token punctuation">,</span>
-      selector<span class="token operator">:</span> <span class="token string">'line'</span><span class="token punctuation">,</span>
+      tagName<span class="token operator">:</span> <span class="token string">"path"</span><span class="token punctuation">,</span>
+      selector<span class="token operator">:</span> <span class="token string">"line"</span><span class="token punctuation">,</span>
       attrs<span class="token operator">:</span> <span class="token punctuation">{</span>
-        fill<span class="token operator">:</span> <span class="token string">'none'</span><span class="token punctuation">,</span>
-        pointerEvents<span class="token operator">:</span> <span class="token string">'none'</span><span class="token punctuation">,</span>
+        fill<span class="token operator">:</span> <span class="token string">"none"</span><span class="token punctuation">,</span>
+        pointerEvents<span class="token operator">:</span> <span class="token string">"none"</span><span class="token punctuation">,</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
@@ -964,65 +957,67 @@ nodes<span class="token punctuation">.</span><span class="token function">forEac
     wrap<span class="token operator">:</span> <span class="token punctuation">{</span>
       connection<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
       strokeWidth<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
-      strokeLinejoin<span class="token operator">:</span> <span class="token string">'round'</span><span class="token punctuation">,</span>
+      strokeLinejoin<span class="token operator">:</span> <span class="token string">"round"</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     line<span class="token operator">:</span> <span class="token punctuation">{</span>
       connection<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-      stroke<span class="token operator">:</span> <span class="token string">'#333333'</span><span class="token punctuation">,</span>
+      stroke<span class="token operator">:</span> <span class="token string">"#333333"</span><span class="token punctuation">,</span>
       strokeWidth<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-      strokeLinejoin<span class="token operator">:</span> <span class="token string">'round'</span><span class="token punctuation">,</span>
+      strokeLinejoin<span class="token operator">:</span> <span class="token string">"round"</span><span class="token punctuation">,</span>
       targetMarker<span class="token operator">:</span> <span class="token punctuation">{</span>
-        tagName<span class="token operator">:</span> <span class="token string">'path'</span><span class="token punctuation">,</span>
-        d<span class="token operator">:</span> <span class="token string">'M 10 -5 0 0 10 5 z'</span><span class="token punctuation">,</span>
+        tagName<span class="token operator">:</span> <span class="token string">"path"</span><span class="token punctuation">,</span>
+        d<span class="token operator">:</span> <span class="token string">"M 10 -5 0 0 10 5 z"</span><span class="token punctuation">,</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//2. 将边注册,这里用的就是Graph，不是实例后的画布对象 第一个参数是自定义的,只要在创建边的时候对应就行</span>
-Graph<span class="token punctuation">.</span><span class="token function">registerEdge</span><span class="token punctuation">(</span><span class="token string">'edge1'</span><span class="token punctuation">,</span>MyEdge<span class="token punctuation">)</span>
+Graph<span class="token punctuation">.</span><span class="token function">registerEdge</span><span class="token punctuation">(</span><span class="token string">"edge1"</span><span class="token punctuation">,</span> MyEdge<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">//3. 使用</span>
 graph<span class="token punctuation">.</span><span class="token function">addEdge</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  shape<span class="token operator">:</span> <span class="token string">'edge1'</span><span class="token punctuation">,</span>
+  shape<span class="token operator">:</span> <span class="token string">"edge1"</span><span class="token punctuation">,</span>
   source<span class="token punctuation">,</span>
   target<span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="箭头"><a href="#箭头" class="headerlink" title="箭头"></a>箭头</h3><p>对于边两端的箭头，<code>antv/x6</code>提供了内置箭头和自定义箭头两种方式</p>
 <h4 id="内置箭头"><a href="#内置箭头" class="headerlink" title="内置箭头"></a>内置箭头</h4><p><code>antv/x6</code>提供了以下的几种箭头。</p>
 <p>实心箭头（block）、经典箭头（classic）、菱形箭头（diamond）、交叉箭头（cross）、async、path、圆形箭头（circle）、圆形和加号箭头（circlePlus）、椭圆箭头（elipse）</p>
 <h4 id="定制箭头"><a href="#定制箭头" class="headerlink" title="定制箭头"></a>定制箭头</h4><h5 id="工厂方法"><a href="#工厂方法" class="headerlink" title="工厂方法"></a>工厂方法</h5><p>在<code>Graph</code>原型上有个<code>registerMarker</code>方法，可以帮助我们自定义箭头</p>
 <pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">// 1.注册</span>
-Graph<span class="token punctuation">.</span><span class="token function">registerMarker</span><span class="token punctuation">(</span><span class="token string">'image'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>args<span class="token operator">:</span> ImageMarkerArgs<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> 
-    <span class="token keyword">const</span> <span class="token punctuation">{</span>imageUrl<span class="token punctuation">,</span> imageWidth<span class="token punctuation">,</span> imageHeight<span class="token punctuation">,</span> <span class="token operator">...</span>attrs<span class="token punctuation">}</span> <span class="token operator">=</span> args
-    <span class="token keyword">return</span> <span class="token punctuation">{</span>
-        <span class="token operator">...</span>attrs<span class="token punctuation">,</span> <span class="token comment">// 原样返回非特殊涵义的参数</span>
-        tagName<span class="token operator">:</span> <span class="token string">'image'</span><span class="token punctuation">,</span> <span class="token comment">// 使用 &lt;image&gt; 标签渲染箭头，其余键值对都将作为该元素的属性。</span>
-        width<span class="token operator">:</span> imageWidth<span class="token punctuation">,</span>
-        height<span class="token operator">:</span> imageHeight<span class="token punctuation">,</span>
-        <span class="token string-property property">'xlink:href'</span><span class="token operator">:</span> imageUrl<span class="token punctuation">,</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
+Graph<span class="token punctuation">.</span><span class="token function">registerMarker</span><span class="token punctuation">(</span><span class="token string">"image"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>args<span class="token operator">:</span> ImageMarkerArgs<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> imageUrl<span class="token punctuation">,</span> imageWidth<span class="token punctuation">,</span> imageHeight<span class="token punctuation">,</span> <span class="token operator">...</span>attrs <span class="token punctuation">}</span> <span class="token operator">=</span> args<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>attrs<span class="token punctuation">,</span> <span class="token comment">// 原样返回非特殊涵义的参数</span>
+    tagName<span class="token operator">:</span> <span class="token string">"image"</span><span class="token punctuation">,</span> <span class="token comment">// 使用 &lt;image&gt; 标签渲染箭头，其余键值对都将作为该元素的属性。</span>
+    width<span class="token operator">:</span> imageWidth<span class="token punctuation">,</span>
+    height<span class="token operator">:</span> imageHeight<span class="token punctuation">,</span>
+    <span class="token string-property property">"xlink:href"</span><span class="token operator">:</span> imageUrl<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">//2. 使用</span>
 edge<span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   line<span class="token operator">:</span> <span class="token punctuation">{</span>
     sourceMarker<span class="token operator">:</span> <span class="token punctuation">{</span>
-      name<span class="token operator">:</span> <span class="token string">'image'</span><span class="token punctuation">,</span>
-      imageUrl<span class="token operator">:</span> <span class="token string">'http://cdn3.iconfinder.com/data/icons/49handdrawing/24x24/left.png'</span><span class="token punctuation">,</span>
+      name<span class="token operator">:</span> <span class="token string">"image"</span><span class="token punctuation">,</span>
+      imageUrl<span class="token operator">:</span>
+        <span class="token string">"http://cdn3.iconfinder.com/data/icons/49handdrawing/24x24/left.png"</span><span class="token punctuation">,</span>
       imageWidth<span class="token operator">:</span> <span class="token number">24</span><span class="token punctuation">,</span>
       imageHeight<span class="token operator">:</span> <span class="token number">24</span><span class="token punctuation">,</span>
       y<span class="token operator">:</span> <span class="token operator">-</span><span class="token number">12</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     targetMarker<span class="token operator">:</span> <span class="token punctuation">{</span>
-      name<span class="token operator">:</span> <span class="token string">'image'</span><span class="token punctuation">,</span>
-      imageUrl<span class="token operator">:</span> <span class="token string">'http://cdn3.iconfinder.com/data/icons/49handdrawing/24x24/left.png'</span><span class="token punctuation">,</span>
+      name<span class="token operator">:</span> <span class="token string">"image"</span><span class="token punctuation">,</span>
+      imageUrl<span class="token operator">:</span>
+        <span class="token string">"http://cdn3.iconfinder.com/data/icons/49handdrawing/24x24/left.png"</span><span class="token punctuation">,</span>
       imageWidth<span class="token operator">:</span> <span class="token number">24</span><span class="token punctuation">,</span>
       imageHeight<span class="token operator">:</span> <span class="token number">24</span><span class="token punctuation">,</span>
       y<span class="token operator">:</span> <span class="token operator">-</span><span class="token number">12</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="直接生成"><a href="#直接生成" class="headerlink" title="直接生成"></a>直接生成</h5><p>我们可以通过实例对象上的暴露的方法直接生成边的同时，指定对应的样式，起始箭头和终止箭头使用了相同的 <code>d</code> 属性，这是因为<code>x6</code>会自动计算箭头方向，简单来说，在定义箭头时，只需要定义一个<strong>向左指向坐标原点</strong>的箭头即可。</p>
 <pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript">graph<span class="token punctuation">.</span><span class="token function">addEdge</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -1254,32 +1249,43 @@ edge<span class="token punctuation">.</span><span class="token function">attr</s
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/03/18/2d-he-3d-zhuan-huan-copy-2/">
+                <a href="/2023/02/28/webgl/">
                     <div class="card-image">
                         
+                        <img src="/images/title.jpeg" class="responsive-img" alt="WebGL">
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="2D和3D转换">
-                        
-                        <span class="card-title">2D和3D转换</span>
+                        <span class="card-title">WebGL</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            webgl起步
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-28
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            John Doe
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/WebGL/">
+                        <span class="chip bg-color">WebGL</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1460,7 +1466,7 @@ edge<span class="token punctuation">.</span><span class="token function">attr</s
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">54k</span>
+                        class="white-color">19.7k</span>
             
             
             
