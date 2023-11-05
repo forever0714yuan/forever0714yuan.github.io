@@ -521,7 +521,7 @@ e
                                 <span class="publish-author">
                                     
                                     <i class="fas fa-user fa-fw"></i>
-                                    John Doe
+                                    小笨
                                     
                                 </span>
                             </div>
@@ -571,7 +571,7 @@ e
                                 <span class="publish-author">
                                     
                                     <i class="fas fa-user fa-fw"></i>
-                                    John Doe
+                                    小笨
                                     
                                 </span>
                             </div>
@@ -594,13 +594,13 @@ e
     
 
     <div class="container row center-align"
-         style="margin-bottom: 15px !important;">
+        style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
                 <span id="year">2019-2023</span>
             
-            <a href="/about" target="_blank">John Doe</a>
+            <a href="/about" target="_blank">小笨</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             
@@ -695,7 +695,10 @@ e
                         var todayHour = today.getHours(); 
                         var todayMinute = today.getMinutes(); 
                         var todaySecond = today.getSeconds(); 
-                        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳) year - 作为date对象的年份，为4位年份值 month - 0-11之间的整数，做为date对象的月份 day - 1-31之间的整数，做为date对象的天数 hours - 0(午夜24点)-23之间的整数，做为date对象的小时数 minutes - 0-59之间的整数，做为date对象的分钟数 seconds - 0-59之间的整数，做为date对象的秒数 microseconds - 0-999之间的整数，做为date对象的毫秒数 */ var t1 = Date.UTC(2017, 09, 11, 00, 00, 00); //北京时间2018-2-13 00:00:00 
+
+                        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳) year - 作为date对象的年份，为4位年份值 month - 0-11之间的整数，做为date对象的月份 day - 1-31之间的整数，做为date对象的天数 hours - 0(午夜24点)-23之间的整数，做为date对象的小时数 minutes - 0-59之间的整数，做为date对象的分钟数 seconds - 0-59之间的整数，做为date对象的秒数 microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+
+                        var t1 = Date.UTC(2023, 11, 05, 00, 00, 00); //北京时间2018-2-13 00:00:00 
                         var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond); 
                         var diff = t2 - t1; 
                         var diffYears = Math.floor(diff / years); 
@@ -788,8 +791,8 @@ e
 <script> 
 $(document).ready(function () { 
     var int = setInterval(fixCount, 50); // 50ms周期检测函数 
-    var pvcountOffset = 80000; // 初始化首次数据 
-    var uvcountOffset = 20000; 
+    var pvcountOffset = 0; // 初始化首次数据 
+    var uvcountOffset = 0; 
     function fixCount() { 
         if (document.getElementById("busuanzi_container_site_pv").style.display != "none") { 
             $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset); 
